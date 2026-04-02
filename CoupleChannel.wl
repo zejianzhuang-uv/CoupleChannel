@@ -21,7 +21,6 @@ CoupleChannelExample[] := Module[
   Print["Charge basis channels: ", Sm1Q0I0];
   result = CoupleChannelBasisMatrix[Sm1Q0I0, 0];
   Print["CoupleChannelBasisMatrix[Sm1Q0I0, 0] = ", MatrixForm[result]];
-  result
 ];
 
 EndPackage[]
