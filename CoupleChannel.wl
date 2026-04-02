@@ -1,8 +1,6 @@
 (* ::Package:: *)
 
-(* ::Package:: *)
-
-BeginPackage["ChannelCouple`"]
+BeginPackage["CoupleChannel`"]
 
 ParticleInformation::usage = "ParticleInformation[SS] returns {phase, {Q, I, I3}} for particle SS.";
 IsospinMesonMultiplet::usage = "IsospinMesonMultiplet[SS] returns the isospin multiplet for meson SS.";
@@ -13,12 +11,8 @@ GroupChannelsByIsospin::usage = "GroupChannelsByIsospin[channels] groups charge-
 CoupleChannelBasisMatrix::usage = "CoupleChannelBasisMatrix[Ch, I] returns the basis transformation matrix.";
 ChannelCoupleExample::usage = "ChannelCoupleExample[] runs an example: S=-1, Q=0, I=0 coupled channel basis matrix.";
 
-Begin["`Private`"]
-
 Get[FileNameJoin[{DirectoryName[$InputFileName], "ParticleInformation.wl"}]]
 Get[FileNameJoin[{DirectoryName[$InputFileName], "IsospinClebschGordan.wl"}]]
-
-End[]
 
 ChannelCoupleExample[] := Module[
   {Sm1Q0I0, result},
