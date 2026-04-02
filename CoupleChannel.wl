@@ -14,7 +14,7 @@ ChannelCoupleExample::usage = "ChannelCoupleExample[] runs an example: S=-1, Q=0
 Get[FileNameJoin[{DirectoryName[$InputFileName], "ParticleInformation.wl"}]]
 Get[FileNameJoin[{DirectoryName[$InputFileName], "IsospinClebschGordan.wl"}]]
 
-ChannelCoupleExample[] := Module[
+CoupleChannelExample[] := Module[
   {Sm1Q0I0, result},
   Sm1Q0I0 = {{S[2],F[5]},{-S[1],F[4]},{S[1],F[6]},{-S[3],F[1]},{-S[4],F[2]},{S[5],F[3]},{S[4],F[7]},{S[3],F[8]}};
   Print["Example: S=-1, Q=0, I=0 coupled channel basis matrix"];
@@ -25,6 +25,4 @@ ChannelCoupleExample[] := Module[
 ];
 
 EndPackage[]
-
-
 
