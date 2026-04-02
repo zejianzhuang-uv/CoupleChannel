@@ -20,7 +20,7 @@ CoupleChannelExample[] := Module[
   Print["Example: S=-1, Q=0, I=0 coupled channel basis matrix"];
   Print["Charge basis channels: ", Sm1Q0I0];
   result = CoupleChannelBasisMatrix[Sm1Q0I0, 0];
-  Print["CoupleChannelBasisMatrix[Sm1Q0I0, 0] = ", result];
+  Print["CoupleChannelBasisMatrix[Sm1Q0I0, 0] = ", MatrixForm[result]];
   result
 ];
 
