@@ -1,4 +1,5 @@
 (* ::Package:: *)
+Begin["CoupleChannel`Private`"]
 
 MakeBoxes[DA,TraditionalForm]:="D";
 MakeBoxes[FA,TraditionalForm]:="F";
@@ -33,3 +34,4 @@ MakeBoxes[F[5],StandardForm]:="\!\(\*SubscriptBox[\(\[CapitalSigma]\), \(0\)]\)"
 MakeBoxes[F[6],StandardForm]:="\!\(\*SuperscriptBox[\(\[CapitalSigma]\), \(-\)]\)";
 MakeBoxes[F[7],StandardForm]:="\!\(\*SubscriptBox[\(\[CapitalXi]\), \(0\)]\)";
 MakeBoxes[F[8],StandardForm]:="\!\(\*SuperscriptBox[\(\[CapitalXi]\), \(-\)]\)";
+End[]
