@@ -1,6 +1,6 @@
 (* ::Package:: *)
 
-Begin["CoupleChannel`Private`"]
+(*Begin["CoupleChannel`Private`"]*)
 
 ParticleInformation[SS_]:=Module[
 {s={
@@ -32,7 +32,5 @@ IsospinBaryonMultiplet[SS_]:=Association[
 "Sigma"->{F[4],F[5],F[6]},
 "Xi"->{F[7],F[8]}}][SS]
 
-End[]
-
-
+(*End[]*)
 

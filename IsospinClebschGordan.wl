@@ -1,8 +1,12 @@
 (* ::Package:: *)
 
-(*Get["ParticleInformation.wl"]*)
-
 Begin["CoupleChannel`Private`"]
+
+
+(*SetDirectory[NotebookDirectory[]]
+Get["ParticleInformation.wl"]*)
+
+
 IsospinClebschGordan[Channel_,TotalIsospin_]:=Module[
 {f1,f2,is1,is2},
 {f1,is1}=ParticleInformation[Channel[[1]]];
@@ -46,4 +50,7 @@ CoupleChannelBasisMatrix[Sm1Q0I0,0]*)
 (*Output (Channels in isospin space): {{{S[2],F[5]},{-S[1],F[4]},{S[1],F[6]}}(*("pi0", "Sig0"),("pim", "Sigp"),("pip", "Sigm")*),
 {{-S[3],F[1]},{-S[4],F[2]}}(*("Km", "p"),("K0bar", "n")*),
 {{S[5],F[3]}}(*("eta", "L")*),{{S[4],F[7]},{S[3],F[8]}}(*("K0", "Xi0"),("Kp", "Xim")*)};*)
+
+
+
 End[]
