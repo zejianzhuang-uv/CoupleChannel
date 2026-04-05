@@ -1,4 +1,5 @@
 (* ::Package:: *)
+
 Begin["CoupleChannel`Private`"]
 
 MakeBoxes[DA,TraditionalForm]:="D";
@@ -7,14 +8,21 @@ MakeBoxes[FA,TraditionalForm]:="F";
 
 (*Meson Field*)
 MakeBoxes[S[1],TraditionalForm]:="\!\(\*SuperscriptBox[\(\[Pi]\), \(+\)]\)";
+MakeBoxes[-S[1],TraditionalForm]:="\!\(\*SuperscriptBox[\(\[Pi]\), \(-\)]\)"
 MakeBoxes[S[2],TraditionalForm]:="\!\(\*SuperscriptBox[\(\[Pi]\), \(0\)]\)";
 MakeBoxes[S[3],TraditionalForm]:="\!\(\*SuperscriptBox[\(K\), \(+\)]\)";
+MakeBoxes[-S[3],TraditionalForm]:="\!\(\*SuperscriptBox[\(K\), \(-\)]\)";
 MakeBoxes[S[4],TraditionalForm]:="\!\(\*SubscriptBox[\(K\), \(0\)]\)";
+MakeBoxes[-S[4],TraditionalForm]:="\!\(\*OverscriptBox[SubscriptBox[\(K\), \(0\)], \(_\)]\)";
 MakeBoxes[S[5],TraditionalForm]:="\[Eta]";
+
+
 MakeBoxes[S[1],StandardForm]:="\!\(\*SuperscriptBox[\(\[Pi]\), \(+\)]\)";
+MakeBoxes[-S[1],StandardForm]:="\!\(\*SuperscriptBox[\(\[Pi]\), \(-\)]\)"
 MakeBoxes[S[2],StandardForm]:="\!\(\*SuperscriptBox[\(\[Pi]\), \(0\)]\)";
 MakeBoxes[S[3],StandardForm]:="\!\(\*SuperscriptBox[\(K\), \(+\)]\)";
 MakeBoxes[S[4],StandardForm]:="\!\(\*SubscriptBox[\(K\), \(0\)]\)";
+MakeBoxes[-S[4],StandardForm]:="\!\(\*OverscriptBox[SubscriptBox[\(K\), \(0\)], \(_\)]\)";
 MakeBoxes[S[5],StandardForm]:="\[Eta]";
 
 (*Baryon Field*)
