@@ -5,8 +5,8 @@ BeginPackage["CoupleChannel`"]
 ParticleInformation::usage = "ParticleInformation[SS] returns {phase, {Q, I, I3}} for particle SS.";
 IsospinMesonMultiplet::usage = "IsospinMesonMultiplet[SS] returns the isospin multiplet for meson SS.";
 IsospinBaryonMultiplet::usage = "IsospinBaryonMultiplet[SS] returns the isospin multiplet for baryon SS.";
-IsospinClebschGordan::usage = "IsospinClebschGordan[Channel, TotalIsospin] computes the CG coefficient for a channel.";
-CoupleChannelBasis::usage = "CoupleChannelBasis[Ch, I] returns the coupled channel basis for isospin I.";
+(*IsospinClebschGordan::usage = "IsospinClebschGordan[Channel, TotalIsospin] computes the CG coefficient for a channel.";*)
+(*CoupleChannelBasis::usage = "CoupleChannelBasis[Ch, I] returns the coupled channel basis for isospin I.";*)
 GroupChannelsByIsospin::usage = "GroupChannelsByIsospin[channels] groups charge-basis channels into isospin multiplets.";
 CoupleChannelBasisMatrix::usage = "CoupleChannelBasisMatrix[Ch, I] returns the basis transformation matrix.";
 ChannelCoupleExample::usage = "ChannelCoupleExample[] runs an example: S=-1, Q=0, I=0 coupled channel basis matrix.";
