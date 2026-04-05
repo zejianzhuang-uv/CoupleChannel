@@ -1,5 +1,7 @@
 (* ::Package:: *)
 
+Begin["CoupleChannel`Private`"]
+
 ParticleInformation[SS_]:=Module[
 {s={
 S[1]->{-1,{0,1,1}} (*pip*),
@@ -21,7 +23,6 @@ F[8]->{-1,{-1,1/2,-1/2}} (*Xim*)}},
 Association[s][SS]
 ];
 
-
 IsospinMesonMultiplet[SS_]:=Association[{"pion"->{S[1],S[2],-S[1]},
 "kaon"->{S[3],S[4],-S[4],-S[3]},
 "eta"->{S[5]}}][SS]
@@ -30,3 +31,8 @@ IsospinBaryonMultiplet[SS_]:=Association[
 "Lambda"->{F[3]},
 "Sigma"->{F[4],F[5],F[6]},
 "Xi"->{F[7],F[8]}}][SS]
+
+End[]
+
+
+
