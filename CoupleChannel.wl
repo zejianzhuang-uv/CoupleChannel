@@ -11,7 +11,7 @@ GroupChannelsByIsospin::usage = "GroupChannelsByIsospin[channels] groups charge-
 CoupleChannelBasisMatrix::usage = "CoupleChannelBasisMatrix[Ch, I] returns the basis transformation matrix.";
 ChannelCoupleExample::usage = "ChannelCoupleExample[] runs an example: S=-1, Q=0, I=0 coupled channel basis matrix.";
 
-Get[FileNameJoin[{DirectoryName[$InputFileName], "ParticleInformation.wl"}]]
+(*Get[FileNameJoin[{DirectoryName[$InputFileName], "ParticleInformation.wl"}]]*)
 Get[FileNameJoin[{DirectoryName[$InputFileName], "IsospinClebschGordan.wl"}]]
 Get[FileNameJoin[{DirectoryName[$InputFileName],"Beautiful_output.wl"}]]
 CoupleChannelExample[] := Module[
