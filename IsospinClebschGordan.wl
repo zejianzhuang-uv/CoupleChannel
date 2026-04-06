@@ -1,6 +1,6 @@
 (* ::Package:: *)
 
-(* Begin["CoupleChannel`Private`"] *)
+Begin["CoupleChannel`Private`"]
 
 
 ParticleInformation[SS_]:=Module[
@@ -84,4 +84,4 @@ CoupleChannelBasisMatrix[Sm1Q0I0,0]*)
 
 
 
-(* End[] *)
+End[]
