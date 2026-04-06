@@ -1,6 +1,7 @@
 (* ::Package:: *)
 
-BeginPackage["CoupleChannel`"]
+(* BeginPackage["CoupleChannel`"] *)
+BeginPackage["CoupleChannel`", {"FeynArts`", "Global`"}]
 
 ParticleInformation::usage = "ParticleInformation[SS] returns {phase, {Q, I, I3}} for particle SS.";
 IsospinMesonMultiplet::usage = "IsospinMesonMultiplet[SS] returns the isospin multiplet for meson SS.";
