@@ -3,6 +3,10 @@
 (* BeginPackage["CoupleChannel`"] *)
 BeginPackage["CoupleChannel`", {"FeynArts`", "FeynCalc`", "Global`"}]
 
+LoadModelFile::usage = "LoadModelFile[f1, f2] loads FeynArts model.";
+GetContactDiagram::usage = "Create the Feynman diagram.";
+GetContactAmp::usage = "Get amplitude.";
+
 ParticleInformation::usage = "ParticleInformation[SS] returns {phase, {Q, I, I3}} for particle SS.";
 IsospinMesonMultiplet::usage = "IsospinMesonMultiplet[SS] returns the isospin multiplet for meson SS.";
 IsospinBaryonMultiplet::usage = "IsospinBaryonMultiplet[SS] returns the isospin multiplet for baryon SS.";
