@@ -1,20 +1,20 @@
 (* ::Package:: *)
 
 LoadModelFile[f1_,f2_]:=Module[{p1=f1,p2=f2},
-FAPatch[PatchModelsOnly->True,
-FAModelsDirectory->FileNameJoin[{NotebookDirectory[],p1}]];
-SetOptions[FourVector, FeynCalcInternal->False];
-Model[p2];
+  FAPatch[PatchModelsOnly->True,
+    FAModelsDirectory->FileNameJoin[{DirectoryName[$InputFileName],p1}]];
+  SetOptions[FourVector, FeynCalcInternal->False];
+  Model[p2];
 ];
 
-
 GetContactDiagram[{i1_,i2_},{o1_,o2_},path_]:=Module[{d},
-d=InsertFields[
-CreateTopologies[0,2->2],
-{i1,i2}->{o1,o2},
-Model->FileNameJoin[{NotebookDirectory[],path}],
-GenericModel->FileNameJoin[{NotebookDirectory[],path}],
-InsertionLevel->{Classes}]];
+  d=InsertFields[
+    CreateTopologies[0,2->2],
+    {i1,i2}->{o1,o2},
+    Model->FileNameJoin[{DirectoryName[$InputFileName],path}],
+    GenericModel->FileNameJoin[{DirectoryName[$InputFileName],path}],
+    InsertionLevel->{Classes}]];
+];
 
 
 GetContactAmp[{i1_,i2_},{o1_,o2_},path_]:=
@@ -32,4 +32,4 @@ amp//FullSimplify];
 
 
 GetContactAmpMatrix[Ch_,factor_,path_]:=
-Table[GetContactAmp[Ch[[i]],Ch[[j]],path]/factor//FullSimplify,{i,Length[Ch]},{j,Length[Ch]}];
+(Table[GetContactAmp[Ch[[i]],Ch[[j]],path],{i,Length[Ch]},{j,Length[Ch]}]/factor)//FullSimplify;
