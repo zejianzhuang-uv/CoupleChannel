@@ -1,11 +1,11 @@
 (* ::Package:: *)
 
-LoadModelFile[f1_,f2_]:=Module[{p1=f1,p2=f2},
+(* LoadModelFile[f1_,f2_]:=Module[{p1=f1,p2=f2},
   FAPatch[PatchModelsOnly->True,
     FAModelsDirectory->FileNameJoin[{DirectoryName[$InputFileName],p1}]];
   SetOptions[FourVector, FeynCalcInternal->False];
   Model[p2];
-];
+]; *)
 
 GetContactDiagram[{i1_,i2_},{o1_,o2_},path_]:=Module[{d},
   d=InsertFields[
