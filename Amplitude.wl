@@ -14,7 +14,6 @@ GetContactDiagram[{i1_,i2_},{o1_,o2_},path_]:=Module[{d},
     Model->FileNameJoin[{DirectoryName[$InputFileName],path}],
     GenericModel->FileNameJoin[{DirectoryName[$InputFileName],path}],
     InsertionLevel->{Classes}]];
-];
 
 
 GetContactAmp[{i1_,i2_},{o1_,o2_},path_]:=
