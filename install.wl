@@ -15,4 +15,5 @@ Module[{dir = FileNameJoin[{$UserBaseDirectory, "Applications", "CoupleChannel"}
     dir
   ];
   Print["Installed successfully. Use Needs[\"CoupleChannel`\"] to load."]
+  Quit[]
 ]
