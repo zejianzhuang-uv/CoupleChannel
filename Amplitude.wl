@@ -6,7 +6,7 @@
   SetOptions[FourVector, FeynCalcInternal->False];
   Model[p2];
 ]; *)
-
+(* 
 GetContactDiagram[{i1_,i2_},{o1_,o2_},path_]:=Module[{d},
   d=InsertFields[
     CreateTopologies[0,2->2],
@@ -31,4 +31,4 @@ amp//FullSimplify];
 
 
 GetContactAmpMatrix[Ch_,factor_,path_]:=
-(Table[GetContactAmp[Ch[[i]],Ch[[j]],path],{i,Length[Ch]},{j,Length[Ch]}]/factor)//FullSimplify;
+(Table[GetContactAmp[Ch[[i]],Ch[[j]],path],{i,Length[Ch]},{j,Length[Ch]}]/factor)//FullSimplify; *)
