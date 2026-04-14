@@ -1,6 +1,6 @@
 (* ::Package:: *)
 
-LoadModelFile[f1_,f2_]:=Module[{p1=f1,p2=f2},
+LoadModelFile[f2_]:=Module[{p2=f2},
   SetOptions[FourVector, FeynCalcInternal->False];
   Model[p2];
 ];
