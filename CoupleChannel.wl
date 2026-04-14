@@ -1,7 +1,7 @@
 (* ::Package:: *)
 
 (* BeginPackage["CoupleChannel`"] *)
-BeginPackage["CoupleChannel`", {"FeynArts`", "FeynCalc`", "Global`"}]
+BeginPackage["CoupleChannel`", {"FeynCalc`", "Global`"}]
 
 LoadModelFile::usage = "LoadModelFile[f1, f2] loads FeynArts model."; 
 GetContactDiagram::usage = "Create the Feynman diagram.";
