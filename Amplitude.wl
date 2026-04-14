@@ -8,8 +8,8 @@ GetContactDiagram[{i1_, i2_}, {o1_, o2_}, path_] := Module[{d},
    d = InsertFields[
      CreateTopologies[0, 2 -> 2],
      {i1, i2} -> {o1, o2},
-     Model -> FileNameJoin[{NotebookDirectory[], path}],
-     GenericModel -> FileNameJoin[{NotebookDirectory[], path}],
+     Model -> FileNameJoin[{DirectoryName[$InputFileName], path}],
+     GenericModel -> FileNameJoin[{DirectoryName[$InputFileName], path}],
      InsertionLevel -> {Classes}]];
 
 
