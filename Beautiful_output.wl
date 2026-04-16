@@ -43,4 +43,41 @@ MakeBoxes[F[5],StandardForm]:="\!\(\*SuperscriptBox[\(\[CapitalSigma]\), \(0\)]\
 MakeBoxes[F[6],StandardForm]:="\!\(\*SuperscriptBox[\(\[CapitalSigma]\), \(-\)]\)";
 MakeBoxes[F[7],StandardForm]:="\!\(\*SuperscriptBox[\(\[CapitalXi]\), \(0\)]\)";
 MakeBoxes[F[8],StandardForm]:="\!\(\*SuperscriptBox[\(\[CapitalXi]\), \(-\)]\)";
+
+
+
+MakeBoxes[k1, TraditionalForm] := "\!\(\*SubscriptBox[\(k\), \(1\)]\)";
+MakeBoxes[k2, TraditionalForm] := "\!\(\*SubscriptBox[\(k\), \(2\)]\)";
+MakeBoxes[p1, TraditionalForm] := "\!\(\*SubscriptBox[\(p\), \(1\)]\)";
+MakeBoxes[p2, TraditionalForm] := "\!\(\*SubscriptBox[\(p\), \(2\)]\)";
+MakeBoxes[mp, TraditionalForm] := "\!\(\*SubscriptBox[\(m\), \(p\)]\)";
+MakeBoxes[mn, TraditionalForm] := "Subscript[m, n]";
+MakeBoxes[mLambda, TraditionalForm] := 
+  "\!\(\*SubscriptBox[\(m\), \(\[CapitalLambda]\)]\)";
+MakeBoxes[mSigmap, TraditionalForm] := 
+  "\!\(\*SubscriptBox[\(m\), \(\!\(\*SuperscriptBox[\(\[CapitalSigma]\), \
+\(+\)]\)\)]\)";
+MakeBoxes[mSigma0, TraditionalForm] := 
+  "\!\(\*SubscriptBox[\(m\), \(\!\(\*SuperscriptBox[\(\[CapitalSigma]\), \
+\(0\)]\)\)]\)";
+MakeBoxes[mSigmam, TraditionalForm] := 
+  "\!\(\*SubscriptBox[\(m\), \(\!\(\*SuperscriptBox[\(\[CapitalSigma]\), \
+\(-\)]\)\)]\)";
+MakeBoxes[mXi0, TraditionalForm] := 
+  "\!\(\*SubscriptBox[\(m\), \(\!\(\*SuperscriptBox[\(\[CapitalXi]\), \
+\(0\)]\)\)]\)";
+MakeBoxes[mXim, TraditionalForm] := 
+  "\!\(\*SubscriptBox[\(m\), \(\!\(\*SuperscriptBox[\(\[CapitalXi]\), \
+\(-\)]\)\)]\)";
+MakeBoxes[mpip, TraditionalForm] := 
+  "\!\(\*SubscriptBox[\(m\), \(\!\(\*SuperscriptBox[\(\[Pi]\), \(+\)]\)\)]\)";
+MakeBoxes[mpi0, TraditionalForm] := 
+  "\!\(\*SubscriptBox[\(m\), \(\!\(\*SuperscriptBox[\(\[Pi]\), \(0\)]\)\)]\)";
+MakeBoxes[mKp, TraditionalForm] := 
+  "\!\(\*SubscriptBox[\(m\), \(\!\(\*SuperscriptBox[\(K\), \(+\)]\)\)]\)";
+MakeBoxes[mK0, TraditionalForm] := 
+  "\!\(\*SubscriptBox[\(m\), \(\!\(\*SuperscriptBox[\(K\), \(0\)]\)\)]\)";
+MakeBoxes[meta, TraditionalForm] := 
+  "\!\(\*SubscriptBox[\(m\), \(\[Eta]\)]\)";
+
 End[]
