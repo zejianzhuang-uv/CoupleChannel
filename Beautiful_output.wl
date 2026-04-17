@@ -2,8 +2,8 @@
 
 Begin["CoupleChannel`Private`"]
 
-MakeBoxes[DA,TraditionalForm]:="D";
-MakeBoxes[FA,TraditionalForm]:="F";
+MakeBoxes[Dp,TraditionalForm]:="D";
+MakeBoxes[Fp,TraditionalForm]:="F";
 
 
 (*Meson Field*)
