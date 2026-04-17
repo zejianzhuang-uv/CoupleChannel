@@ -2,8 +2,8 @@
 
 Begin["CoupleChannel`Private`"]
 
-MakeBoxes[Dp,TraditionalForm]:="D";
-MakeBoxes[Fp,TraditionalForm]:="F";
+(* MakeBoxes[Dp,TraditionalForm]:="D";
+MakeBoxes[Fp,TraditionalForm]:="F"; *)
 (*Meson Field*)
 MakeBoxes[S[1],TraditionalForm]:="\!\(\*SuperscriptBox[\(\[Pi]\), \(+\)]\)";
 MakeBoxes[-S[1],TraditionalForm]:="\!\(\*SuperscriptBox[\(\[Pi]\), \(-\)]\)"
@@ -38,7 +38,7 @@ MakeBoxes[F[5],StandardForm]:="\!\(\*SuperscriptBox[\(\[CapitalSigma]\), \(0\)]\
 MakeBoxes[F[6],StandardForm]:="\!\(\*SuperscriptBox[\(\[CapitalSigma]\), \(-\)]\)";
 MakeBoxes[F[7],StandardForm]:="\!\(\*SuperscriptBox[\(\[CapitalXi]\), \(0\)]\)";
 MakeBoxes[F[8],StandardForm]:="\!\(\*SuperscriptBox[\(\[CapitalXi]\), \(-\)]\)";
-MakeBoxes[k1, TraditionalForm] := "\!\(\*SubscriptBox[\(k\), \(1\)]\)";
+(* MakeBoxes[k1, TraditionalForm] := "\!\(\*SubscriptBox[\(k\), \(1\)]\)";
 MakeBoxes[k2, TraditionalForm] := "\!\(\*SubscriptBox[\(k\), \(2\)]\)";
 MakeBoxes[p1, TraditionalForm] := "\!\(\*SubscriptBox[\(p\), \(1\)]\)";
 MakeBoxes[p2, TraditionalForm] := "\!\(\*SubscriptBox[\(p\), \(2\)]\)";
@@ -70,5 +70,5 @@ MakeBoxes[mKp, TraditionalForm] :=
 MakeBoxes[mK0, TraditionalForm] := 
   "\!\(\*SubscriptBox[\(m\), \(\!\(\*SuperscriptBox[\(K\), \(0\)]\)\)]\)";
 MakeBoxes[meta, TraditionalForm] := 
-  "\!\(\*SubscriptBox[\(m\), \(\[Eta]\)]\)";
+  "\!\(\*SubscriptBox[\(m\), \(\[Eta]\)]\)"; *)
 End[]
