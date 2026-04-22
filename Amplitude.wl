@@ -4,20 +4,13 @@ LoadModelFile[f2_]:=Module[{p2=f2},
   SetOptions[FourVector, FeynCalcInternal->False];
   Model[p2];
 ];
-(*GetContactDiagram[{i1_, i2_}, {o1_, o2_}, path_] := Module[{d},
+GetContactDiagram[{i1_, i2_}, {o1_, o2_}, path_] := Module[{d},
    d = InsertFields[
      CreateTopologies[0, 2 -> 2],
      {i1, i2} -> {o1, o2},
      Model -> FileNameJoin[{DirectoryName[$InputFileName], path}],
      GenericModel -> FileNameJoin[{DirectoryName[$InputFileName], path}],
-     InsertionLevel -> {Classes}]];*)
-GetContactDiagram[{i1_, i2_}, {o1_, o2_}, path_] := Module[{d},
-  d = InsertFields[
-    CreateTopologies[0, 2 -> 2],
-    {i1, i2} -> {o1, o2},
-    Model -> FileNameJoin[{DirectoryName[$InputFileName], path}],
-    GenericModel -> "Lorentz",
-    InsertionLevel -> {Classes}]];
+     InsertionLevel -> {Classes}]];
 
 
 GetContactAmp[{i1_, i2_}, {o1_, o2_}, path_] :=
