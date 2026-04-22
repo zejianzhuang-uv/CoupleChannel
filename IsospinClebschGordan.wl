@@ -76,6 +76,12 @@ Table[CoupleChannelBasis[g[[i]],I]//Coefficient[#,b[[j]]]&,{i,Length[g]},{j,Leng
 ];
 
 
+AmpIsospinSpace[Amp_,Ch_,I_]:=Module[
+{R=CoupleChannelBasisMatrix[Ch,I]},
+Transpose[R] . Amp . R
+]
+
+
 (*Sm1Q0I0={{S[2],F[5]},{-S[1],F[4]},{S[1],F[6]},{-S[3],F[1]},{-S[4],F[2]},{S[5],F[3]},{S[4],F[7]},{S[3],F[8]}}; (*Channels in charge basis*)
 CoupleChannelBasisMatrix[Sm1Q0I0,0]*)
 (*Output (Channels in isospin space): {{{S[2],F[5]},{-S[1],F[4]},{S[1],F[6]}}(*("pi0", "Sig0"),("pim", "Sigp"),("pip", "Sigm")*),
