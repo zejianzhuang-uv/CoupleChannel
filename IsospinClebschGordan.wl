@@ -78,7 +78,7 @@ Table[CoupleChannelBasis[g[[i]],I]//Coefficient[#,b[[j]]]&,{i,Length[g]},{j,Leng
 
 AmpIsospinSpace[Amp_,Ch_,I_]:=Module[
 {R=CoupleChannelBasisMatrix[Ch,I]},
-Transpose[R] . Amp . R
+Transpose[R] . Amp . R//FullSimplify
 ]
 
 
