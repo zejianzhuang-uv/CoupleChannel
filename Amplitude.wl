@@ -1,9 +1,9 @@
 (* ::Package:: *)
 
-LoadModelFile[f2_]:=Module[{p2=f2},
+(*LoadModelFile[f2_]:=Module[{p2=f2},
   SetOptions[FourVector, FeynCalcInternal->False];
   Model[p2];
-];
+];*)
 GetContactDiagram[{i1_, i2_}, {o1_, o2_}, path_] := Module[{d},
    d = InsertFields[
      CreateTopologies[0, 2 -> 2],
@@ -26,9 +26,21 @@ GetContactAmp[{i1_, i2_}, {o1_, o2_}, path_] :=
          	Contract -> True]] // DiracSimplify // DiracSubstitute67 // 
      DotExpand(*//FeynAmpDenominatorExplicit*);
    amp // FullSimplify];
+   
 GetContactAmpMatrix[Ch_, factor_, path_] := 
-  Table[GetContactAmp[Ch[[i]], Ch[[j]], path]/factor // 
-    FullSimplify, {i, Length[Ch]}, {j, Length[Ch]}];
+Module[
+    {m = Table[
+        GetContactAmp[Ch[[i]], Ch[[j]], path]/factor // FullSimplify,
+        {i, Length[Ch]}, {j, Length[Ch]}
+    ]},
+
+    If[
+        SymmetricMatrixQ[m],
+        m,
+        Print["Warning: matrix is not symmetric"];
+        m
+    ]
+];
 
 
 
