@@ -26,6 +26,19 @@ GetContactAmp[{i1_, i2_}, {o1_, o2_}, path_] :=
          	Contract -> True]] // DiracSimplify // DiracSubstitute67 // 
      DotExpand(*//FeynAmpDenominatorExplicit*);
    amp // FullSimplify];
+GetContactAmp2[{i1_, i2_}, {o1_, o2_}, path_] :=
+  Module[{d = GetContactDiagram[{i1, i2}, {o1, o2}, path], amp},
+   amp = ExpandScalarProduct[
+        FCFAConvert[CreateFeynAmp[d],
+         IncomingMomenta -> {k1, p1},
+         OutgoingMomenta -> {k2, p2},
+         UndoChiralSplittings -> True,
+         ChangeDimension -> 4,
+         	List -> False, 
+         	SMP -> True, 
+         	Contract -> True]] // DiracSimplify // DiracSubstitute67 // 
+     DotExpand(*//FeynAmpDenominatorExplicit*);
+   amp // FullSimplify];
    
 GetContactAmpMatrix[Ch_, factor_, path_] := 
 Module[
