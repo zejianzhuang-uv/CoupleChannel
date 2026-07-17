@@ -55,7 +55,7 @@ IsospinClebschGordan[Ch[[i]],I] ff[I,Ch[[i]]],
 
 
 
-GroupChannelsByIsospin[channels_] :=
+(*GroupChannelsByIsospin[channels_] :=
   Module[{groups, matched},
     groups = {};
     Do[
@@ -67,8 +67,28 @@ GroupChannelsByIsospin[channels_] :=
       {bk, {"N", "Lambda", "Sigma", "Xi"}}
     ];
     SortBy[groups, FirstPosition[channels, #[[1]]][[1]] &]
+  ];*)
+GroupChannelsByIsospin[channels_] :=
+  Module[{groups, matched, mesonKeys = {"pion", "kaon", "eta"},
+     baryonKeys = {"N", "Lambda", "Sigma", "Xi"}, secondSlotSpecs},
+    (*meson or baryon *)
+    secondSlotSpecs = Join[
+       {#, IsospinBaryonMultiplet} & /@ baryonKeys,
+       {#, IsospinMesonMultiplet} & /@ mesonKeys
+     ];
+    groups = {};
+    Do[
+      Do[
+        matched = Select[channels,
+           MemberQ[IsospinMesonMultiplet[mk], #[[1]]] &&
+            MemberQ[spec[[2]][spec[[1]]], #[[2]]] &];
+        If[Length[matched] > 0, AppendTo[groups, matched]],
+        {spec, secondSlotSpecs}
+      ],
+      {mk, mesonKeys}
+    ];
+    SortBy[groups, FirstPosition[channels, #[[1]]][[1]] &]
   ];
-
 CoupleChannelBasisMatrix[Ch_,I_]:=Module[
 {b=Table[ff[I,Ch[[i]]],{i,Length[Ch]}],
 g=GroupChannelsByIsospin[Ch]},
